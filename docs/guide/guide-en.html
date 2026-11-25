@@ -37,9 +37,9 @@
   <h1>მაი & Family</h1>
   <p class="sub">Website management guide</p>
   <table>
-    <tr><th>Website</th><td>https://frossigneux.github.io/cafe/ <br><small>(once a domain is connected: https://<span class="blank"></span>)</small></td></tr>
+    <tr><th>Website</th><td>https://maifamily.github.io/cafe/ <br><small>(once a domain is connected: https://<span class="blank"></span>)</small></td></tr>
     <tr><th>Editing</th><td>https://app.pagescms.org</td></tr>
-    <tr><th>Code and data</th><td>https://github.com/frossigneux/cafe</td></tr>
+    <tr><th>Code and data</th><td>https://github.com/maifamily/cafe</td></tr>
     <tr><th>WhatsApp (orders)</th><td>+995 593 62 80 90</td></tr>
     <tr><th>Version</th><td>2026-11-09</td></tr>
   </table>
@@ -60,7 +60,7 @@
     <h3>Accounts</h3>
   <table>
     <tr><th>Service</th><th>What for</th><th>Owner</th></tr>
-    <tr><td>GitHub</td><td>Code, data, publishing</td><td>frossigneux</td></tr>
+    <tr><td>GitHub</td><td>Code, data, publishing</td><td>maifamily</td></tr>
     <tr><td>Pages CMS</td><td>Editing the menu and settings</td><td>Via GitHub or email invite</td></tr>
     <tr><td>Worldbus.ge</td><td>Domain name (.ge)</td><td><span class="blank"></span></td></tr>
     <tr><td>Google Business</td><td>Google Maps and Search listing</td><td><span class="blank"></span></td></tr>
@@ -72,7 +72,7 @@
   
 
     <h3>Owner (GitHub account)</h3>
-    <p> open app.pagescms.org, click <b>Sign in with GitHub</b>. The first time, allow the Pages CMS app on the <code>frossigneux/cafe</code> repository (it can be limited to that one). Open the <b>cafe</b> project: the left bar shows Menu, Settings and Media.</p>
+    <p> open app.pagescms.org, click <b>Sign in with GitHub</b>. The first time, allow the Pages CMS app on the <code>maifamily/cafe</code> repository (it can be limited to that one). Open the <b>cafe</b> project: the left bar shows Menu, Settings and Media.</p>
     <h3>Staff (no GitHub account)</h3>
     <p> the owner goes to <b>Admin → Collaborators → Invite a collaborator</b> and enters their email. They receive a sign-in link by email; no password is needed. Afterwards they sign in at app.pagescms.org with the same email.</p>
   </section>
@@ -144,7 +144,7 @@
   <h2>7. For a technician</h2>
   
 
-    <p>Static site built with <b>Astro 6</b> (Node 22), no server and no database. On every push to <code>main</code>, <code>.github/workflows/deploy.yml</code> builds it and publishes to <b>GitHub Pages</b>. Repository: <code>github.com/frossigneux/cafe</code>.</p>
+    <p>Static site built with <b>Astro 6</b> (Node 22), no server and no database. On every push to <code>main</code>, <code>.github/workflows/deploy.yml</code> builds it and publishes to <b>GitHub Pages</b>. Repository: <code>github.com/maifamily/cafe</code>.</p>
     <table>
       <tr><th>Path</th><th>Role</th></tr>
       <tr><td><code>content/menu.json</code>, <code>content/settings.json</code></td><td>All café data. Validated at build time (<code>src/data/*.ts</code>); a mistake fails the build with a readable message.</td></tr>
@@ -158,7 +158,7 @@
       <tr><td><code>DESIGN.md</code>, <code>PRODUCT.md</code></td><td>Design system and product decisions.</td></tr>
     </table>
     <h3>Local work</h3>
-<pre>git clone git@github.com:frossigneux/cafe.git && cd cafe
+<pre>git clone git@github.com:maifamily/cafe.git && cd cafe
 npm ci
 npm run dev      # http://localhost:4321
 npm run build    # same check as the publish workflow</pre>
@@ -181,7 +181,7 @@ npm run build    # same check as the publish workflow</pre>
 @    A      185.199.109.153
 @    A      185.199.110.153
 @    A      185.199.111.153
-www  CNAME  frossigneux.github.io.</pre></li>
+www  CNAME  maifamily.github.io.</pre></li>
       <li>On GitHub: repository <b>Settings → Pages → Custom domain</b>, enter the domain, save, wait for the DNS check, then tick <b>Enforce HTTPS</b>. No <code>CNAME</code> file is needed with the Actions deployment.</li>
       <li>Re-run the publish workflow (Actions → Publish site → Run workflow). The build reads the site address from GitHub Pages, so links, sitemap and sharing tags switch to the new domain and the <code>/cafe/</code> prefix disappears by itself.</li>
       <li>Update the link on Google Business, Facebook and printed material.</li>

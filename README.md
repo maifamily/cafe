@@ -2,7 +2,7 @@
 
 Site statique Astro, en trois langues : géorgien (`/`), anglais (`/en/`) et russe (`/ru/`). Le client remplit un panier puis envoie sa commande sous forme de message WhatsApp prérempli. Il n'y a ni serveur ni base de données, et aucun paiement en ligne. Le client paie au café par carte ou en espèces, ou par virement BOG ou TBC si ces options sont activées.
 
-En ligne : https://frossigneux.github.io/cafe/
+En ligne : https://maifamily.github.io/cafe/
 
 ## Modifier le contenu
 
@@ -68,7 +68,7 @@ Le workflow `.github/workflows/deploy.yml` compile et publie le site à chaque c
 1. Enregistrez le domaine sur [worldbus.ge](https://worldbus.ge/domains/) et renouvelez-le chaque année.
 2. Dans le DNS Worldbus, créez :
    - quatre enregistrements `A` sur `@` : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` ;
-   - un enregistrement `CNAME` sur `www`, pointant vers `frossigneux.github.io.`.
+   - un enregistrement `CNAME` sur `www`, pointant vers `maifamily.github.io.`.
 3. Sur GitHub, dans **Settings → Pages → Custom domain**, saisissez le domaine, attendez la vérification DNS, puis cochez **Enforce HTTPS**. Avec un déploiement par Actions, aucun fichier `CNAME` n'est nécessaire.
 4. Relancez la publication (**Actions → Publish site → Run workflow**). Les liens, le sitemap et les balises de partage passent alors sur le nouveau domaine, et le préfixe `/cafe/` disparaît.
 5. Mettez à jour le lien sur Google Business Profile, Facebook et les supports imprimés.
